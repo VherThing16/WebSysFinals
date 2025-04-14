@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsabili - Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f6f6f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-container {
+      background-color: white;
+      padding: 20px 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .profile-header img {
+      height: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .avatar {
+      font-size: 50px;
+      margin: 20px auto;
+      color: #aaa;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 2px 2px 4px #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #000;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="https://i.ibb.co/F75STtR/market-icon.png" alt="Logo" />
+      <strong>RESPONSABILI</strong>
+    </div>
+
+    <h2>Profile</h2>
+    <div class="avatar">👤</div>
+    <p>Edit Profile</p>
+
+    <form id="profileForm">
+      <input type="text" placeholder="First Name" required />
+      <input type="text" placeholder="Last Name" required />
+      <input type="date" placeholder="Date of Birth" required />
+      <select>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("profileForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Normally you would save profile info here
+
+      // Then redirect to homepage
+      window.location.href = "home.html"; // Replace with your actual homepage file
+    });
+  </script>
+</body>
+</html>
